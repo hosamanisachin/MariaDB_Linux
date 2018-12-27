@@ -1,0 +1,52 @@
+*To show the databases stored*
+"show databases;"
+
+*Show the tables*
+"show tables;"
+
+*Describe the table contents i.e. column names* -> Shows the table
+"desc table_name;"
+
+MariaDB [desd_E2]> desc E2;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| name  | varchar(10) | YES  |     | NULL    |       |
+| id    | int(11)     | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+
+
+
+
+Creation:
+
+"create database name_db;" 
+//A database with name_db is created
+
+*To select a database*
+
+********* MariaDB [(none)]
+"use name_db;"
+// To get into the name_db; to insert data
+********* MariaDB [name_db]
+
+*To create Table*
+"create table E2(name varchar(10),id int)"
+// we are creating a table with name E2 having 2 column  "name | id"
+  // name -> char type that stores 10 letter
+  // id -> int type
+  
+  There are twi ways to add values in the table
+  1)MariaDB [desd_E2]> insert into E2 values("Sachin",123);
+  
+  2) MariaDB [desd_E2]> insert into E2(name,id) values("samuel",1);
+  
+ *To see the values in the current table i.e Table is inside Database*
+ "select * from E2;"
+ 
+MariaDB [desd_E2]> select * from E2;
++--------+------+
+| name   | id   |
++--------+------+
+| Sachin |  123 |
++--------+------+
