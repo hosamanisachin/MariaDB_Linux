@@ -15,3 +15,5 @@ sudo mysql_secure_installtion
 
 To start MariaDB
 mysql -u root -p
+*if there is error : Can't connect to mysql server* then use the below command and run above command again
+sudo systemctl start mariadbserver.
